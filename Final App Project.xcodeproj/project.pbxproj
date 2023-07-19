@@ -11,6 +11,7 @@
 		FC7CB01B2A61958300544475 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7CB01A2A61958300544475 /* ContentView.swift */; };
 		FC7CB01D2A61958400544475 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7CB01C2A61958400544475 /* Assets.xcassets */; };
 		FC7CB0202A61958400544475 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7CB01F2A61958400544475 /* Preview Assets.xcassets */; };
+		FC8EE10A2A68395100EED0F0 /* Passwords.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8EE1092A68395100EED0F0 /* Passwords.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		FC7CB01A2A61958300544475 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FC7CB01C2A61958400544475 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC7CB01F2A61958400544475 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FC8EE1092A68395100EED0F0 /* Passwords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passwords.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				FC7CB0182A61958300544475 /* Final_App_ProjectApp.swift */,
 				FC7CB01A2A61958300544475 /* ContentView.swift */,
+				FC8EE1092A68395100EED0F0 /* Passwords.swift */,
 				FC7CB01C2A61958400544475 /* Assets.xcassets */,
 				FC7CB01E2A61958400544475 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC8EE10A2A68395100EED0F0 /* Passwords.swift in Sources */,
 				FC7CB01B2A61958300544475 /* ContentView.swift in Sources */,
 				FC7CB0192A61958300544475 /* Final_App_ProjectApp.swift in Sources */,
 			);
