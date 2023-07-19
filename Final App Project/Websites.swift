@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  Websites.swift
 //  Final App Project
 //
-//  Created by Anokhi Luthra on 7/14/23.
+//  Created by Anokhi Luthra on 7/19/23.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct Websites: View {
     var body: some View {
         NavigationStack {
             ZStack {
@@ -15,31 +15,48 @@ struct ContentView: View {
                     .ignoresSafeArea()
                 ScrollView {
                     VStack (spacing: 20) {
-                        Text("HOME")
+                        Text("WEBSITES")
                             .padding()
-                            .font(.system(size: 60))
+                            .font(.system(size: 50))
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .foregroundColor(Color("DarkBackground"))
                         VStack (spacing: 20) {
-                            Text("What is cybersecurity?")
+                            Text("How to know if you should trust a website:")
+                                .fontWeight(.bold)
                                 .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color("LightButton"))
+                                .cornerRadius(30)
+                            
+                            Text("Check the domain of the website to make sure it is credible and you have spelled it correctly. A lot of times people create fake websites that are very similar to the original but have removed or added an extra letter.")
                                 .padding()
                                 .background(Color("TextBackground"))
                                 .cornerRadius(30)
-
-                            Text("Cybersecurity is the practice of protecting systems, networks, and research from unauthorized access or criminal use. So much of our personal information is stored on the internet now. And so, it is important to protect your information from cyber attacks. Poor cybersecurity raises many risks, including malware erasing your entire system, an attacker altering your systems, or even stealing your credit card information and making unauthorized purchases.")
+                            
+                            Text("Check the SSL certificate, make sure it is https and not http. Http websites can’t be trusted and are mostly likely trying to steal your information.")
+                                .padding()
+                                .background(Color("LightButton"))
+                                .cornerRadius(30)
+                            Text("Check the lock next to the url of the website. If it is closed, the website is safe, but if anything else happens, the website is not safe.")
+                                .padding()
+                                .background(Color("TextBackground"))
+                                .cornerRadius(30)
+                            Text("Analyze website design. A lot of time these hackers don’t have time to create a good looking website. If there are many formatting mistakes along with spelling and grammar, that is another sign the website isn’t trustworthy. ")
+                                .padding()
+                                .background(Color("LightButton"))
+                                .cornerRadius(30)
+                            Text("Search for a privacy policy as it outlines the information how the website will use or protect your data.")
                                 .padding()
                                 .background(Color("TextBackground"))
                                 .cornerRadius(30)
                         }
+                        
                         .font(.system(size: 23))
-
                         NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
                             Text("Finished learning? Take a quiz to test your knowledge by clicking here.")
                         }
                         .font(.system(size: 20))
-
                         .buttonStyle(.borderedProminent)
                         .tint(Color("DarkBackground"))
                         HStack {
@@ -63,15 +80,15 @@ struct ContentView: View {
                         .buttonStyle(.borderedProminent)
                         .tint(Color("LightButton"))
                     } .padding(20)
-
                 }
             }
         }
+
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Websites_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Websites()
     }
 }

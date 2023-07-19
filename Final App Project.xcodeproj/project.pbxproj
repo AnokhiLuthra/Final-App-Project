@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC35D3BA2A68648200503EB8 /* PasswordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35D3B92A68648200503EB8 /* PasswordChecker.swift */; };
+		FC35D3BC2A6865A600503EB8 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35D3BB2A6865A600503EB8 /* Information.swift */; };
+		FC35D3BE2A68675200503EB8 /* ScamsAndPhishing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35D3BD2A68675200503EB8 /* ScamsAndPhishing.swift */; };
+		FC35D3C02A68691200503EB8 /* Websites.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35D3BF2A68691200503EB8 /* Websites.swift */; };
+		FC35D3C22A686B2C00503EB8 /* PasswordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35D3C12A686B2C00503EB8 /* PasswordGenerator.swift */; };
 		FC7CB0192A61958300544475 /* Final_App_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7CB0182A61958300544475 /* Final_App_ProjectApp.swift */; };
 		FC7CB01B2A61958300544475 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7CB01A2A61958300544475 /* ContentView.swift */; };
 		FC7CB01D2A61958400544475 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7CB01C2A61958400544475 /* Assets.xcassets */; };
@@ -15,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC35D3B92A68648200503EB8 /* PasswordChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChecker.swift; sourceTree = "<group>"; };
+		FC35D3BB2A6865A600503EB8 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
+		FC35D3BD2A68675200503EB8 /* ScamsAndPhishing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScamsAndPhishing.swift; sourceTree = "<group>"; };
+		FC35D3BF2A68691200503EB8 /* Websites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Websites.swift; sourceTree = "<group>"; };
+		FC35D3C12A686B2C00503EB8 /* PasswordGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGenerator.swift; sourceTree = "<group>"; };
 		FC7CB0152A61958300544475 /* Final App Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Final App Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7CB0182A61958300544475 /* Final_App_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Final_App_ProjectApp.swift; sourceTree = "<group>"; };
 		FC7CB01A2A61958300544475 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,7 +65,12 @@
 			children = (
 				FC7CB0182A61958300544475 /* Final_App_ProjectApp.swift */,
 				FC7CB01A2A61958300544475 /* ContentView.swift */,
+				FC35D3BD2A68675200503EB8 /* ScamsAndPhishing.swift */,
 				FC8EE1092A68395100EED0F0 /* Passwords.swift */,
+				FC35D3BF2A68691200503EB8 /* Websites.swift */,
+				FC35D3BB2A6865A600503EB8 /* Information.swift */,
+				FC35D3B92A68648200503EB8 /* PasswordChecker.swift */,
+				FC35D3C12A686B2C00503EB8 /* PasswordGenerator.swift */,
 				FC7CB01C2A61958400544475 /* Assets.xcassets */,
 				FC7CB01E2A61958400544475 /* Preview Content */,
 			);
@@ -140,8 +155,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC35D3C02A68691200503EB8 /* Websites.swift in Sources */,
+				FC35D3BA2A68648200503EB8 /* PasswordChecker.swift in Sources */,
 				FC8EE10A2A68395100EED0F0 /* Passwords.swift in Sources */,
 				FC7CB01B2A61958300544475 /* ContentView.swift in Sources */,
+				FC35D3C22A686B2C00503EB8 /* PasswordGenerator.swift in Sources */,
+				FC35D3BE2A68675200503EB8 /* ScamsAndPhishing.swift in Sources */,
+				FC35D3BC2A6865A600503EB8 /* Information.swift in Sources */,
 				FC7CB0192A61958300544475 /* Final_App_ProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

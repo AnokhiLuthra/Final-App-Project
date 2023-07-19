@@ -16,25 +16,31 @@ struct Passwords: View {
                 ScrollView {
                     VStack (spacing: 20) {
                         VStack (spacing: 20) {
-                            Text("What is cybersecurity?")
+                            Text("Passwords")
                                 .frame(maxWidth: .infinity)
                                 .padding()
                                 .background(Color("TextBackground"))
                                 .cornerRadius(30)
-                            Text("Cybersecurity is the practice of protecting systems, networks, and research from unauthorized access or criminal use. So much of our personal information is stored on the internet now. And so, it is important to protect your information from cyber attacks. Poor cybersecurity raises many risks, including malware erasing your entire system, an attacker altering your systems, or even stealing your credit card information and making unauthorized purchases.")
+                            Text("Passwords can only be a combination of letters, numbers, and symbols (ASCII-standard characters only)\n\nDo not make a password with accents or accented characters, that is used in many other places, starts or ends with a blank space, containing sequential numbers or letters (ex: 1234, qwerty, abcd, etc.)\n\n**Make your password unique**\nUse different a different password for each important account. If you reuse passwords and someone gets one of them, they will have access to your other accounts. If you cannot remember all of your passwords, use a tool to keep track of them.\n\n**Make your password longer & more memorable**\nThe longer your password is, the stronger it is. To make your password memorable you can use a series of words that is meaningful to just you or an abbreviation (using the first letter of each word in a sentence/phrase).\n\nTry to use special characters if possible, as it makes passwords harder to guess by using a combination of upper and lowercase letters.\n\nStay away from using personal information or common words because people you know can easily guess it and people you don’t know can easily find this information about you because it is often publicly available.\n\nUse words that cannot be found in the dictionary by substituting out certain letters with symbols or numbers if you want to use a particular word (ex: “patio garden” can become P8tty0G#5dn).")
                                 .padding()
                                 .background(Color("TextBackground"))
                                 .cornerRadius(30)
 
                             HStack {
-                                Text("Cybersecurity is the practice of protecting systems, networks, and research from unauthorized access or criminal use. So much of our personal information is stored on the internet now. And so, it is important to protect your information from cyber attacks.")
-                                    .padding()
-                                    .background(Color("TextBackground"))
-                                    .cornerRadius(30)
-                                Text("Cybersecurity is the practice of protecting systems, networks, and research from unauthorized access or criminal use. So much of our personal information is stored on the internet now. And so, it is important to protect your information from cyber attacks.")
-                                    .padding()
-                                    .background(Color("TextBackground"))
-                                    .cornerRadius(30)
+                                NavigationLink(destination: PasswordChecker()) {
+                                    Text("Click for a Password Checker")
+                                        .padding()
+                                        .background(Color("TextBackground"))
+                                        .cornerRadius(30)
+                                        .foregroundColor(.black)
+                                }
+                                NavigationLink(destination: PasswordGenerator()) {
+                                    Text("Click for a Password Generator")
+                                        .padding()
+                                        .background(Color("TextBackground"))
+                                        .cornerRadius(30)
+                                        .foregroundColor(.black)
+                                }
                             }
                         }
                         .font(.system(size: 23))
@@ -47,7 +53,7 @@ struct Passwords: View {
                         .buttonStyle(.borderedProminent)
                         .tint(Color("DarkBackground"))
                         HStack {
-                            NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
+                            NavigationLink(destination: Information()) {
                                 Text("Page 1")
                                     .padding(.vertical)
                             }
@@ -55,11 +61,11 @@ struct Passwords: View {
                                 Text("Page 2")
                                     .padding(.vertical)
                             }
-                            NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
+                            NavigationLink(destination: ScamsAndPhishing()) {
                                 Text("Page 3")
                                     .padding(.vertical)
                             }
-                            NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
+                            NavigationLink(destination: Websites()) {
                                 Text("Page 4")
                                     .padding(.vertical)
                             }
