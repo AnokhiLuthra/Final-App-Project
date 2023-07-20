@@ -66,7 +66,14 @@ struct PasswordChecker: View {
             Color("LightBackground")
                 .ignoresSafeArea()
             VStack {
-                Text("What are the requirements for your password?")
+                Text("**What are the requirements for your password?**")
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color("TextBackground"))
+                    .cornerRadius(30)
+                    .font(.system(size: 20))
+
                 VStack {
 
                     Toggle(isOn: $minimumLength) {
@@ -83,10 +90,7 @@ struct PasswordChecker: View {
                         )
                         Text("\(Int(length))")
                             .fontWeight(.bold)
-                            .foregroundColor(isEditing ? Color("LightButton") : Color("DarkBackground"))
-                    }
-                    Toggle(isOn: $SpecialCharacters) {
-                        Text("Special Characters?")
+                            .foregroundColor(isEditing ? Color("LightBackground") : Color("DarkBackground"))
                     }
                     Toggle(isOn: $UpperCase) {
                         Text("Uppercase Characters?")
@@ -97,13 +101,23 @@ struct PasswordChecker: View {
                     Toggle(isOn: $Numbers) {
                         Text("Numbers?")
                     }
+                    Toggle(isOn: $SpecialCharacters) {
+                        Text("Special Characters?")
+                    }
                 }
                 .padding()
+                .background(Color("TextBackground"))
+                .cornerRadius(30)
+                
                 TextField("Type your password here...", text: $userPassword)
+                    .cornerRadius(30)
                     .multilineTextAlignment(.center)
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                    .border(Color.gray, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                    .font(.headline)
                     .padding()
+                .background(Color("TextField"))
+                .cornerRadius(15)
+                    
+                
                 Button("Submit Password") {
                     if minimumLength {
                         if userPassword.count < Int(length) {
@@ -128,11 +142,11 @@ struct PasswordChecker: View {
 
                 }
                 .buttonStyle(.borderedProminent)
-                .tint(Color("LightButton"))
+                .tint(Color("DarkBackground"))
                 
                                 
                 Text(displayText)
-            }
+            } .padding(20)
         }
     }
 }
