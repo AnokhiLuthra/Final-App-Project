@@ -90,6 +90,11 @@ struct PasswordGenerator: View {
 
 struct PasswordGenerator_Previews: PreviewProvider {
     static var previews: some View {
-        PasswordGenerator()
+        Group{
+            PasswordGenerator()
+                .preferredColorScheme(.light)
+            PasswordGenerator()
+                .preferredColorScheme(.dark)
+        }
     }
 }

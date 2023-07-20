@@ -67,6 +67,7 @@ struct Passwords: View {
 
                         NavigationLink(destination: Quiz()) {
                             Text("Finished learning? Take a quiz to test your knowledge by clicking here.")
+                            .foregroundColor(Color("QuizText"))
                         }
                         .font(.system(size: 20))
 
@@ -103,6 +104,12 @@ struct Passwords: View {
 
 struct Passwords_Previews: PreviewProvider {
     static var previews: some View {
-        Passwords()
+        Group{
+            Passwords()
+                .preferredColorScheme(.light)
+            Passwords()
+                .preferredColorScheme(.dark)
+        }
+        
     }
 }

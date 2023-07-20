@@ -55,6 +55,7 @@ struct Websites: View {
                         .font(.system(size: 23))
                         NavigationLink(destination: Quiz()) {
                             Text("Finished learning? Take a quiz to test your knowledge by clicking here.")
+                            .foregroundColor(Color("QuizText"))
                         }
                         .font(.system(size: 20))
                         .buttonStyle(.borderedProminent)
@@ -89,6 +90,11 @@ struct Websites: View {
 
 struct Websites_Previews: PreviewProvider {
     static var previews: some View {
-        Websites()
+        Group{
+            Websites()
+                .preferredColorScheme(.light)
+            Websites()
+                .preferredColorScheme(.dark)
+        }
     }
 }

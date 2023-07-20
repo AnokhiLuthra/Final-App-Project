@@ -34,9 +34,9 @@ struct ContentView: View {
                                 .cornerRadius(30)
                         }
                         .font(.system(size: 23))
-
                         NavigationLink(destination: Quiz()) {
                             Text("Go through other pages to learn more about cybersecurity! \nFinished learning? Take a quiz to test your knowledge by clicking here.")
+                                .foregroundColor(Color("QuizText"))
                         }
                         .font(.system(size: 20))
 
@@ -72,6 +72,11 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group{
+            ContentView()
+                .preferredColorScheme(.light)
+            ContentView()
+                .preferredColorScheme(.dark)
+        }
     }
 }

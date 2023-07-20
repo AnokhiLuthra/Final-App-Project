@@ -60,7 +60,7 @@ struct Quiz: View {
                                 .cornerRadius(30)
                             HStack {
                                 Button("Yes") {
-                                    result2 = "Correct! Even though longer passwords are better than shorter, the second password has an accented character.That's not right, try again?"
+                                    result2 = "Correct! Even though longer passwords are better than shorter, the second password has an accented character."
                                 }
                                     .padding()
                                     .background(Color("TextBackground"))
@@ -321,6 +321,11 @@ struct Quiz: View {
 
 struct Quiz_Previews: PreviewProvider {
     static var previews: some View {
-        Quiz()
+        Group{
+            Quiz()
+                .preferredColorScheme(.light)
+            Quiz()
+                .preferredColorScheme(.dark)
+        }
     }
 }

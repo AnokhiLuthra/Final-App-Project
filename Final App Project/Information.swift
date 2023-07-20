@@ -72,6 +72,7 @@ struct Information: View {
                         .font(.system(size: 23))
                         NavigationLink(destination: Quiz()) {
                             Text("Finished learning? Take a quiz to test your knowledge by clicking here.")
+                            .foregroundColor(Color("QuizText"))
                         }
                         .font(.system(size: 20))
                         .buttonStyle(.borderedProminent)
@@ -105,6 +106,11 @@ struct Information: View {
 
 struct Information_Previews: PreviewProvider {
     static var previews: some View {
-        Information()
+        Group{
+            Information()
+                .preferredColorScheme(.light)
+            Information()
+                .preferredColorScheme(.dark)
+        }
     }
 }

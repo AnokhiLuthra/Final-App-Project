@@ -114,7 +114,7 @@ struct PasswordChecker: View {
                     .multilineTextAlignment(.center)
                     .font(.headline)
                     .padding()
-                .background(Color("TextField"))
+               // .background(Color("TextField"))
                 .cornerRadius(15)
                     
                 
@@ -153,6 +153,11 @@ struct PasswordChecker: View {
 
 struct PasswordChecker_Previews: PreviewProvider {
     static var previews: some View {
-        PasswordChecker()
+        Group{
+            PasswordChecker()
+                .preferredColorScheme(.light)
+            PasswordChecker()
+                .preferredColorScheme(.dark)
+        }
     }
 }
