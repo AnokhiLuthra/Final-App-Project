@@ -42,7 +42,7 @@ struct ScamsAndPhishing: View {
                                         .cornerRadius(30)
                                 }
                                 .font(.system(size: 23))
-                                NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
+                                NavigationLink(destination: Quiz()) {
                                     Text("Finished learning? Take a quiz to test your knowledge by clicking here.")
                                 }
                                 .font(.system(size: 20))

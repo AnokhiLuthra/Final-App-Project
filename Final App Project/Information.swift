@@ -19,7 +19,7 @@ struct Information: View {
                             Text("**INFORMATION PROTECTION**")
                                 .frame(maxWidth: .infinity)
                                 .padding()
-                                .background(Color("TextBackground"))
+                                .background(Color("LightButton"))
                                 .cornerRadius(30)
                               
                             Text("The internet has a multitude of personal information stored on it. And with the abundance of scammers, hackers, criminals trying to steal your personal information online, it is a good idea to know how to lock down you devices, network, and other personal information")
@@ -70,7 +70,7 @@ struct Information: View {
                            
                         }
                         .font(.system(size: 23))
-                        NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
+                        NavigationLink(destination: Quiz()) {
                             Text("Finished learning? Take a quiz to test your knowledge by clicking here.")
                         }
                         .font(.system(size: 20))

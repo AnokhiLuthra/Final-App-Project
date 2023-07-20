@@ -35,8 +35,8 @@ struct ContentView: View {
                         }
                         .font(.system(size: 23))
 
-                        NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
-                            Text("Finished learning? Take a quiz to test your knowledge by clicking here.")
+                        NavigationLink(destination: Quiz()) {
+                            Text("Go through other pages to learn more about cybersecurity! \nFinished learning? Take a quiz to test your knowledge by clicking here.")
                         }
                         .font(.system(size: 20))
 
