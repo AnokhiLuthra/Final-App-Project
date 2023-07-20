@@ -22,7 +22,7 @@ struct ContentView: View {
                             .fontWeight(.bold)
                             .foregroundColor(Color("DarkBackground"))
                         VStack (spacing: 20) {
-                            Text("What is cybersecurity?")
+                            Text("**What is cybersecurity?**")
                                 .frame(maxWidth: .infinity)
                                 .padding()
                                 .background(Color("TextBackground"))

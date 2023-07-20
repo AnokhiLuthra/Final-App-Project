@@ -15,12 +15,12 @@ struct Websites: View {
                     .ignoresSafeArea()
                 ScrollView {
                     VStack (spacing: 20) {
-                        Text("WEBSITES")
+                        Text("**WEBSITES**")
+                            .frame(maxWidth: .infinity)
                             .padding()
-                            .font(.system(size: 50))
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color("DarkBackground"))
+                            .background(Color("TextBackground"))
+                            .cornerRadius(30)
+                            .font(.system(size: 23))
                         VStack (spacing: 20) {
                             Text("How to know if you should trust a website:")
                                 .fontWeight(.bold)
@@ -33,10 +33,10 @@ struct Websites: View {
                                 .padding()
                                 .background(Color("TextBackground"))
                                 .cornerRadius(30)
-                            
+                           
                             Text("Check the SSL certificate, make sure it is https and not http. Http websites can’t be trusted and are mostly likely trying to steal your information.")
                                 .padding()
-                                .background(Color("LightButton"))
+                                .background(Color("TextBackground"))
                                 .cornerRadius(30)
                             Text("Check the lock next to the url of the website. If it is closed, the website is safe, but if anything else happens, the website is not safe.")
                                 .padding()
@@ -44,7 +44,7 @@ struct Websites: View {
                                 .cornerRadius(30)
                             Text("Analyze website design. A lot of time these hackers don’t have time to create a good looking website. If there are many formatting mistakes along with spelling and grammar, that is another sign the website isn’t trustworthy. ")
                                 .padding()
-                                .background(Color("LightButton"))
+                                .background(Color("TextBackground"))
                                 .cornerRadius(30)
                             Text("Search for a privacy policy as it outlines the information how the website will use or protect your data.")
                                 .padding()
