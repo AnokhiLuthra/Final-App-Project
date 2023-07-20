@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001D974D2A697EAB00AAFD8A /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D974C2A697EAB00AAFD8A /* Quiz.swift */; };
 		FC35D3BA2A68648200503EB8 /* PasswordChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35D3B92A68648200503EB8 /* PasswordChecker.swift */; };
 		FC35D3BC2A6865A600503EB8 /* Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35D3BB2A6865A600503EB8 /* Information.swift */; };
 		FC35D3BE2A68675200503EB8 /* ScamsAndPhishing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35D3BD2A68675200503EB8 /* ScamsAndPhishing.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		001D974C2A697EAB00AAFD8A /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		FC35D3B92A68648200503EB8 /* PasswordChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChecker.swift; sourceTree = "<group>"; };
 		FC35D3BB2A6865A600503EB8 /* Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Information.swift; sourceTree = "<group>"; };
 		FC35D3BD2A68675200503EB8 /* ScamsAndPhishing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScamsAndPhishing.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				FC35D3BB2A6865A600503EB8 /* Information.swift */,
 				FC35D3B92A68648200503EB8 /* PasswordChecker.swift */,
 				FC35D3C12A686B2C00503EB8 /* PasswordGenerator.swift */,
+				001D974C2A697EAB00AAFD8A /* Quiz.swift */,
 				FC7CB01C2A61958400544475 /* Assets.xcassets */,
 				FC7CB01E2A61958400544475 /* Preview Content */,
 			);
@@ -163,6 +166,7 @@
 				FC35D3BE2A68675200503EB8 /* ScamsAndPhishing.swift in Sources */,
 				FC35D3BC2A6865A600503EB8 /* Information.swift in Sources */,
 				FC7CB0192A61958300544475 /* Final_App_ProjectApp.swift in Sources */,
+				001D974D2A697EAB00AAFD8A /* Quiz.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
