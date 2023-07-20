@@ -32,9 +32,10 @@ struct Quiz: View {
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .foregroundColor(Color("DarkBackground"))
+                       
                         VStack (spacing: 20) {
-                           
-                            Text("Question 1:")
+                            
+                            Text("Question 1: What should I be cautious of?")
                                 .fontWeight(.bold)
                                 .frame(maxWidth: .infinity)
                                 .padding()
@@ -42,7 +43,7 @@ struct Quiz: View {
                                   .cornerRadius(30)
                         
                                 Button("Click here to reveal the answer") {
-                                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                                        result1 = "Buttons that take you to other websites, public wifis, and unknown senders"
                                     }
                                 .padding()
                                 .background(Color("TextBackground"))
@@ -51,6 +52,7 @@ struct Quiz: View {
                          
                             Text(result1)
                                 .padding(1)
+                            
                             
                             Text("Question 2: Is s7d8ftgSDFHJ a better password than SDskjhfd731SPfhsä37323?")
                                 .fontWeight(.bold)
@@ -78,52 +80,18 @@ struct Quiz: View {
                             
                             Text(result2)
                                 .padding(1)
-                                //.background(Color("TextBackground"))
-                                //.cornerRadius(30)
                             
-                            Text("Question 3: What's the best replacement password for 'ILoveDogs123'?")
+                            
+                            Text("Question 3: You have been sent an email from your local state government. It reads, 'Due to the devastating impact of the Covid-19 pandemic, we would like to offer compensate for those affected. If you would like to apply, go to the link below.' If you hover over it, the website does not match up with the link's text. Is this safe or a scam?")
                                 .fontWeight(.bold)
                                 .frame(maxWidth: .infinity)
                                 .padding()
                                 .background(Color("LightButton"))
                                 .cornerRadius(30)
                             
-                            HStack {
-                                Button("1L0v3D0g$274") {
-                                    result3 = "Correct! The more variety, the better."
-                                }
-                                    .padding()
-                                    .background(Color("TextBackground"))
-                                    .cornerRadius(30)
-                                    .foregroundColor(Color.black)
-                                
-                                Button("I_L0VED0GS321") {
-                                    result3 = "That's not right, try again?"
-                                }
-                                    .padding()
-                                    .background(Color("TextBackground"))
-                                    .cornerRadius(30)
-                                    .foregroundColor(Color.black)
-                            }
-                            
-                            Text(result3)
-                                .padding(1)
-
-                            
-                            Text("Question 4: You have been sent an email from your internet provider. They say, 'Your most recent bill have not been paid. Please log in to your account on our website that we've linked here for your conveneice to wire-transfer the payment.' Is this safe or a scam?")
-                                .fontWeight(.bold)
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color("LightButton"))
-                                .cornerRadius(30)
-                            
-                        }
-                        .font(.system(size: 23))
-                        
-                        VStack {
                             HStack {
                                 Button("Safe") {
-                                    result4 = "That's not right, try again?"
+                                    result3 = "That's not right, try again?"
                                 }
                                     .padding()
                                     .background(Color("TextBackground"))
@@ -131,7 +99,41 @@ struct Quiz: View {
                                     .foregroundColor(Color.black)
                                 
                                 Button("Scam") {
-                                    result4 = "Correct! The email is too suspicious about wire-transfering money and has grammar and spelling mistakes."
+                                    result3 = "Correct! The link in the email did not match up with the text, which could be very dangerous."
+                                }
+                                    .padding()
+                                    .background(Color("TextBackground"))
+                                    .cornerRadius(30)
+                                    .foregroundColor(Color.black)
+                            }
+                            Text(result3)
+                                .padding(1)
+                            
+                            
+                            Text("Question 4: You're on a website that tells you to create an account. The account needs your name, date of birth, and your email. What should you do?")
+                                .fontWeight(.bold)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color("LightButton"))
+                                .cornerRadius(30)
+                            
+                            
+                            
+                        }
+                        .font(.system(size: 23))
+                        
+                        VStack {
+                            HStack {
+                                Button("Give them my real name and date of birth, and my personal email") {
+                                    result4 = "This is acceptable, but make sure before you input personal information that the website is safe."
+                                }
+                                    .padding()
+                                    .background(Color("TextBackground"))
+                                    .cornerRadius(30)
+                                    .foregroundColor(Color.black)
+                                
+                                Button("Give them a fake name and date of birth, and a barely-used email") {
+                                    result4 = "This is acceptable, but if you trust the website to be safe, then this isn't absolutely necessary."
                                 }
                                     .padding()
                                     .background(Color("TextBackground"))
@@ -140,10 +142,9 @@ struct Quiz: View {
                             }
                             
                             Text(result4)
-                                .multilineTextAlignment(.center)
                                 .padding(1)
                             
-                            Text("Question 5: You have been sent an email from your local state government. It reads, 'Due to the devastating impact of the Covid-19 pandemic, we would like to offer compensate for those affected. If you would like to apply, go to the link below.' If you hover over it, the website does not match up with the link's text. Is this safe or a scam?")
+                            Text("Question 5: You have been sent an email from your internet provider. They say, 'Your most recent bill have not been paid. Please log in to your account on our website that we've linked here for your conveneice to wire-transfer the payment.' Is this safe or a scam?")
                                 .fontWeight(.bold)
                                 .frame(maxWidth: .infinity)
                                 .padding()
@@ -160,17 +161,48 @@ struct Quiz: View {
                                     .foregroundColor(Color.black)
                                 
                                 Button("Scam") {
-                                    result5 = "Correct! The link in the email did not match up with the text, which could be very dangerous."
+                                    result5 = "Correct! The email is too suspicious about wire-transfering money and has grammar and spelling mistakes."
                                 }
                                     .padding()
                                     .background(Color("TextBackground"))
                                     .cornerRadius(30)
                                     .foregroundColor(Color.black)
                             }
+                            
                             Text(result5)
+                                .multilineTextAlignment(.center)
                                 .padding(1)
                             
-                            Text("Question 6: You have been sent an email from no-reply@accounts.google.com that reads, 'We noticed a new sign-in to your Google Account on a Mac device. If this was you, you don’t need to do anything. If not, we’ll help you secure your account.' There is a button that says 'Check activity' that you can see will go to myaccount.google.com/notifications because you hovered over it. Is this safe or scam?")
+                            
+                            Text("Question 6: What's the best replacement password for 'ILoveDogs123'?")
+                                .fontWeight(.bold)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color("LightButton"))
+                                .cornerRadius(30)
+                            
+                            HStack {
+                                Button("1L0v3D0g$274") {
+                                    result6 = "Correct! The more variety, the better."
+                                }
+                                    .padding()
+                                    .background(Color("TextBackground"))
+                                    .cornerRadius(30)
+                                    .foregroundColor(Color.black)
+                                
+                                Button("I_L0VED0GS321") {
+                                    result6 = "That's not right, try again?"
+                                }
+                                    .padding()
+                                    .background(Color("TextBackground"))
+                                    .cornerRadius(30)
+                                    .foregroundColor(Color.black)
+                            }
+                            
+                            Text(result6)
+                                .padding(1)
+                            
+                            Text("Question 7: You have been sent an email from no-reply@accounts.google.com that reads, 'We noticed a new sign-in to your Google Account on a Mac device. If this was you, you don’t need to do anything. If not, we’ll help you secure your account.' There is a button that says 'Check activity' that you can see will go to myaccount.google.com/notifications because you hovered over it. Is this safe or scam?")
                                 .fontWeight(.bold)
                                 .frame(maxWidth: .infinity)
                                 .padding()
@@ -179,7 +211,7 @@ struct Quiz: View {
                             
                             HStack {
                                 Button("Safe") {
-                                    result6 = "Correct! The email address has its own domain and if the button is clicked, it will go to a safe website."
+                                    result7 = "Correct! The email address has its own domain and if the button is clicked, it will go to a safe website."
                                 }
                                     .padding()
                                     .background(Color("TextBackground"))
@@ -187,21 +219,22 @@ struct Quiz: View {
                                     .foregroundColor(Color.black)
                                 
                                 Button("Scam") {
-                                    result6 = "That's not right, try again?"
+                                    result7 = "That's not right, try again?"
                                 }
                                     .padding()
                                     .background(Color("TextBackground"))
                                     .cornerRadius(30)
                                     .foregroundColor(Color.black)
                             }
-                            Text(result6)
-                                .padding(1)
                                
                         }
                         .font(.system(size: 23))
                         
                         VStack {
-                            Text("Question 7: Which website is safe? http://google.com or https://google.com")
+                            Text(result7)
+                                .padding(1)
+                            
+                            Text("Question 8: Which website is safe? http://google.com or https://google.com")
                                 .fontWeight(.bold)
                                 .frame(maxWidth: .infinity)
                                 .padding()
@@ -209,54 +242,34 @@ struct Quiz: View {
                                 .cornerRadius(30)
                            
                             Button("Click here to reveal the answer") {
-                                    result7 = "Although they look very similar, the second link is safe because it has an 's' at the end of http."
+                                    result8 = "Although they look very similar, the second link is safe because it has an 's' at the end of http."
                                 }
                             .padding()
                             .background(Color("TextBackground"))
                             .cornerRadius(30)
                             .foregroundColor(Color.black)
                             
-                            Text(result7)
-                                .padding(1)
-                            
-                            Text("Question 8: You're on a website that tells you to create an account. The account needs your name, date of birth, and your email. What should you do?")
-                                .fontWeight(.bold)
-                                .frame(maxWidth: .infinity)
-                                .padding()
-                                .background(Color("LightButton"))
-                                .cornerRadius(30)
-                            
-                            HStack {
-                                Button("Give them my real name and date of birth, and my personal email") {
-                                    result8 = "This is acceptable, but make sure before you input personal information that the website is safe."
-                                }
-                                    .padding()
-                                    .background(Color("TextBackground"))
-                                    .cornerRadius(30)
-                                    .foregroundColor(Color.black)
-                                
-                                Button("Give them a fake name and date of birth, and a barely-used email") {
-                                    result8 = "This is acceptable, but if you trust the website to be safe, then this isn't absolutely necessary."
-                                }
-                                    .padding()
-                                    .background(Color("TextBackground"))
-                                    .cornerRadius(30)
-                                    .foregroundColor(Color.black)
-                            }
                             Text(result8)
                                 .padding(1)
                             
-                            Text("Question 9:")
+                            
+                            Text("Question 9: What can I do to protect my devices?")
                                 .fontWeight(.bold)
                                 .frame(maxWidth: .infinity)
                                 .padding()
                                 .background(Color("LightButton"))
                                 .cornerRadius(30)
-                            Text("Placeholder")
+                            
+                            Button("Click here to reveal the answer") {
+                                result9 = "Make sure your software is up to date and that your router is secure."
+                            }
                                 .padding()
                                 .background(Color("TextBackground"))
                                 .cornerRadius(30)
-                            
+                                .foregroundColor(Color.black)
+
+                            Text(result9)
+                                .padding(1)
                         }
                         .font(.system(size: 23))
                         
