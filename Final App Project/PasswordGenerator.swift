@@ -8,85 +8,78 @@
 import SwiftUI
 
 struct PasswordGenerator: View {
+    @State private var minimumLength: Bool = false
+    @State private var SpecialCharacters: Bool = false
+    @State private var UpperCase: Bool = false
+    @State private var LowerCase: Bool = false
+    @State private var Numbers: Bool = false
+    @State private var userPassword = ""
+    @State private var displayText = ""
+    @State private var passwords: Array = ["oJdG1@20", "6*sjG&f12", "@84k1$Uvps", "mrVg1@258", "q5X0R1&i"]
+    @State private var length = 9.0
+    @State private var isEditing = false
+
     var body: some View {
-        Text("Password")
+        ZStack {
+            Color("LightBackground")
+                .ignoresSafeArea()
+            VStack {
+                Text("**What are the requirements for your password?**")
+                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color("TextBackground"))
+                    .cornerRadius(30)
+                    .font(.system(size: 20))
+
+                VStack {
+
+                    Toggle(isOn: $minimumLength) {
+                        Text("Minimum Length?")
+                    }
+                    if minimumLength {
+                        Slider(
+                            value: $length,
+                            in: 6...12,
+                            step: 1,
+                            onEditingChanged: { editing in
+                                isEditing = editing
+                            }
+                        )
+                        Text("\(Int(length))")
+                            .fontWeight(.bold)
+                            .foregroundColor(isEditing ? Color("LightBackground") : Color("DarkBackground"))
+                    }
+                    Toggle(isOn: $UpperCase) {
+                        Text("Uppercase Characters?")
+                    }
+                    Toggle(isOn: $LowerCase) {
+                        Text("Lowercase Characters?")
+                    }
+                    Toggle(isOn: $Numbers) {
+                        Text("Numbers?")
+                    }
+                    Toggle(isOn: $SpecialCharacters) {
+                        Text("Special Characters?")
+                    }
+                }
+                .padding()
+                .background(Color("TextBackground"))
+                .cornerRadius(30)
+                                   
+                
+                Button("Request Password") {
+                    displayText = passwords.randomElement()!
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(Color("DarkBackground"))
+                
+                                
+                Text(displayText)
+            } .padding(20)
+        }
     }
 }
-/*struct PasswordGenerator: View {
-    @State private var passwordLength: Double = 12.0
-    @State private var includeUppercase: Bool = true
-    @State private var includeLowercase: Bool = true
-    @State private var includeNumbers: Bool = true
-    @State private var includeSpecialCharacters: Bool = true
-    @State var generatedPassword: String = "Slider"
-
-    var body: some View {
-        VStack {
-            Text("Password Generator")
-              .font(.title)
-              .padding()
-            // Password Length Slider
-            HStack {
-              Text("Password Length: \(passwordLength)")
-              Slider(value: $passwordLength, in: 6...30, step: 1.0)
-                .padding(.horizontal)
-            }
-            .padding()
-            // Character Type Selection
-            Toggle(isOn: $includeUppercase) {
-              Text("Include Uppercase Letters")
-            }
-            .padding()
-            Toggle(isOn: $includeLowercase) {
-              Text("Include Lowercase Letters")
-            }
-            .padding()
-            Toggle(isOn: $includeNumbers) {
-              Text("Include Numbers")
-            }
-            .padding()
-            Toggle(isOn: $includeSpecialCharacters) {
-              Text("Include Special Characters")
-            }
-            .padding()
-            // Generate Password Button
-            Button(action: generatePassword) {
-              Text("Generate Password")
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.blue)
-                .cornerRadius(8)
-            }
-            .padding()
-            // Display Generated Password
-            Text("Generated Password:")
-            Text(generatedPassword)
-              .padding()
-
-        }
-
-        private func generatePassword() {
-            let characterSets: [String] = [
-              includeUppercase ? "ABCDEFGHIJKLMNOPQRSTUVWXYZ" :,
-              includeLowercase ? "abcdefghijklmnopqrstuvwxyz" :,
-              includeNumbers ? "0123456789" :,
-              includeSpecialCharacters ? "!@#$%^&*()-_=+[{]}\\|;:’\",<.>/?" : "
-            ]
-              
-            let availableCharacters = characterSets.joined()
-            guard !availableCharacters.isEmpty else {
-              generatedPassword = "Select at least one character type."
-              return
-            }
-            // 1. Create an array of random characters with the desired password length
-            let passwordCharacters = Array(repeating: (), count: Int(passwordLength))
-              .map { _ in availableCharacters.randomElement() }
-            // 2. Combine the characters into a single string to form the password
-            let password = String(passwordCharacters.compactMap { $0 })
-            generatedPassword = password
-        }
-    } 
-}*/
 
 struct PasswordGenerator_Previews: PreviewProvider {
     static var previews: some View {

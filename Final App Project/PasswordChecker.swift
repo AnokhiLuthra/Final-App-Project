@@ -58,7 +58,7 @@ struct PasswordChecker: View {
         }
     }
 
-    @State private var length = 6.0
+    @State private var length = 9.0
     @State private var isEditing = false
 
     var body: some View {
